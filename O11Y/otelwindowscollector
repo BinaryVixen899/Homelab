@@ -1,0 +1,31 @@
+receivers:
+  hostmetrics:
+  collection_interval: 30s
+    scrapers:
+      cpu:
+      memory:
+      load:
+      network:
+      swap:
+
+processors:
+  batch:
+  memory_limiter:
+    check_interval: 5s
+    limit_mib: 1000
+    spike_limit_mib: 500
+
+exporters:
+  otlphttp:
+    endpoint: https://api.honeycomb.io
+    headers:
+      "x-honeycomb-team": "${HONEYCOMB_API_KEY}"
+      "x-honeycomb-dataset": "myWindowsDataset"
+      
+
+service:
+  pipelines:
+    metrics:
+      receivers: [hostmetrics]
+      processors: [batch, memory_limiter]
+      exporters: [otlphttp]

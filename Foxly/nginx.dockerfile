@@ -1,0 +1,2 @@
+from ubuntu/nginx:latest
+

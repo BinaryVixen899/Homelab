@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Dolores
+  labels:
+    name: Dolores
+spec:
+  containers:
+  - name: Dolores
+    image: 
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080

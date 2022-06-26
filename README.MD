@@ -21,4 +21,5 @@ Each NGINX pod runs a specific website that is exposed to the outside
 
 Dolores is our Discord chatbot, a service exposes Dolores to the outside
 
-
+## FoxCorp 
+Foxcorp is for services that are used to support the house and the homelab itself such as PiHole, Docker Registry, etc. 

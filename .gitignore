@@ -1,7 +1,9 @@
 learn-terraform-deploy-nginx-kubernetes/
 FoxCorp/arkade
+
 O11Y/otel-collector-config.yaml
 O11Y/otelcol-custom
+
 **/.env
 # Local .terraform directories
 **/.terraform/*

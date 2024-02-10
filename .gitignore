@@ -37,3 +37,5 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+Tailscale/tailscale.tf
+Tailscale/.terraform.lock.hcl

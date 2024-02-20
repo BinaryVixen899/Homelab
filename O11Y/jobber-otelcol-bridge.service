@@ -1,0 +1,14 @@
+[Unit]
+Description = "Connects otelcol-custom and jobber"
+Requires=otelcol-custom.service jobbermaster.service jobber.service
+After=otelcol-custom.service jobbermaster.service jobber.service 
+
+[Service]
+ExecStart=socat TCP4:127.0.0.1:2000, TCP4:127.0.0.1:2005
+KillMode=control-group
+Restart=always
+Type=simple
+# Maybe an okay service choice? It all depends on the behavior of different Types...
+
+[Install]
+WantedBy=multi-user.target

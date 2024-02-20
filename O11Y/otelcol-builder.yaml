@@ -6,10 +6,11 @@ exporters:
   # - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/alibabacloudlogserviceexporter v0.86.0
   # - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.86.0
   - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v0.93.0
-  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.93.0 
+  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.93.0
 
 receivers:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/tcplogreceiver v0.93.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/receiver/windowsperfcountersreceiver v0.93.0
 
 processors:
   - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.93.0
